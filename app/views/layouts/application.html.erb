@@ -12,15 +12,24 @@
 
   <body>
   <header id="main_navigation" class="clearfix">
-			<a href="index.html" class="name">Jose Vega</a>	
+  			<%= link_to "Jose Vega", root_path, class: "name" %>
 			<nav>
 				<%= link_to "Artículos", posts_path %>
 				<a href="#">Proyectos</a>
 				<a href="#">Contacto</a>
 
 			</nav>
-
 		</header>
+		
     <%= yield %>
+
+    <footer id=main_footer>
+		<p class="copyright">&copy; 2016 Jose Vega</p>
+		<nav>
+			<a href="https://twitter.com/joc4" target="_blank"><i class="fa fa-twitter" aria-hidden="true"></i></a>
+			<a href="https://www.instagram.com/jocvegar/" target="_blank"><i class="fa fa-instagram" aria-hidden="true"></i></a>
+			<a href="https://github.com/jocvegar/" target="_blank"><i class="fa fa-github" aria-hidden="true"></i></a>
+		</nav>
+		</footer>
   </body>
 </html>

@@ -14,15 +14,17 @@
 
 .homepage_content {
 	h2{
-		font-size: 1.6rem;
+		font-size: 1.25rem;
 		text-transform: uppercase;
 	}
 	
 	h3{
-		font-size: .85em;
+		font-size: .65em;
 		font-weight: 400;
 		margin-bottom: 2em;
+		text-align: left;
 	}
+
 	a {
 		text-decoration: none;
 		color: $dark;
@@ -33,15 +35,25 @@
 
 	}
 	.date {
-		font-size: .85em;
+		font-size: .75em;
 		margin-bottom: 2em;
 		color: $light;
+		text-align: left;
 	}
 	p {
 		margin: 0 0 .75em 0;
+		text-align: left;
 	}
 
 	.about {
 		padding: 0 7.5% 0 0;
 	}
+	hr {
+		width: 4em;
+		display: block;
+		height: 2px;
+		border: 0;
+		border-top: 2px solid $highlight;
+		margin: 2rem 0;
+		}
 }
