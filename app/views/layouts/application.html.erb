@@ -1,7 +1,9 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>Blog</title>
+    <title> Jose Vega - Ingeniero y Dise&ntilde;ador</title>
+		<link href="https://fonts.googleapis.com/css?family=Raleway:400,700" rel="stylesheet"> 
+		<script src="https://use.fontawesome.com/d3be72798d.js"></script>
     <%= csrf_meta_tags %>
 
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
@@ -9,6 +11,16 @@
   </head>
 
   <body>
+  <header id="main_navigation" class="clearfix">
+			<a href="index.html" class="name">Jose Vega</a>	
+			<nav>
+				<%= link_to "Artículos", posts_path %>
+				<a href="#">Proyectos</a>
+				<a href="#">Contacto</a>
+
+			</nav>
+
+		</header>
     <%= yield %>
   </body>
 </html>
