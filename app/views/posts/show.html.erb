@@ -12,7 +12,7 @@
 			<hr>
 
 			<div id="share_box">
-			<p>Compartir Conociendo a Ruby on Rails</p>
+			<p>Compartir <%= @post.title%></p>
 			<!--twitter-->
 			<a onclick="javascript:window.open('http://twitter.com/intent/tweet?text=<%= @post.title %> by @jocvegar - &amp;url=<%=url_for([@post, {only_path: false}]) %>', '_blank', 'width=800, height=500, top=200, left=300');void(0);"><i class="fa fa-twitter"></i></a> 
 			<!--facebook-->
