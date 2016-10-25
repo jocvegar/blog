@@ -1,31 +1,31 @@
 <div id="post_show_content" class="skinny_wrapper">
-			<header>
+	<header>
 
-				<p class="date"><%= @post.created_at.strftime('%A, %B %d') %> </p>
-				<h1><%= @post.title%></h1>
-				<hr>
-			</header>
+		<p class="date"><%= @post.created_at.strftime('%A, %B %d') %> </p>
+		<h1><%= @post.title%></h1>
+		<hr>
+	</header>
 
-			<div id="content">
-				<%= markdown @post.content%>
-			</div>
-			<hr>
+	<div id="content">
+		<%= markdown @post.content%>
+	</div>
+	<hr>
 
-			<div id="share_box">
-			<p>Compartir <%= @post.title%></p>
-			<!--twitter-->
-			<a onclick="javascript:window.open('http://twitter.com/intent/tweet?text=<%= @post.title %> by @jocvegar - &amp;url=<%=url_for([@post, {only_path: false}]) %>', '_blank', 'width=800, height=500, top=200, left=300');void(0);"><i class="fa fa-twitter"></i></a> 
-			<!--facebook-->
-			<a onclick="javascript:window.open('http://www.facebook.com/sharer/sharer.php?=<%=url_for([@post, {only_path: false}]) %>', '_blank', 'width=800, height=500, top=200, left=300');void(0);"><i class="fa fa-facebook"></i></a>
-			<!--googleplus-->
-			<a onclick="javascript:window.open('http://www.plus.google.com/share?=<%=url_for([@post, {only_path: false}]) %>', '_blank', 'width=800, height=500, top=200, left=300');void(0);"><i class="fa fa-google-plus"></i></a>
-			</div>
-			
-			<hr>
+	<div id="share_box">
+		<p>Compartir <%= @post.title%></p>
+		<!--twitter-->
+		<a onclick="javascript:window.open('http://twitter.com/intent/tweet?text=<%= @post.title %> by @jocvegar - &amp;url=<%=url_for([@post, {only_path: false}]) %>', '_blank', 'width=800, height=500, top=200, left=300');void(0);"><i class="fa fa-twitter"></i></a> 
+		<!--facebook-->
+		<a onclick="javascript:window.open('http://www.facebook.com/sharer/sharer.php?=<%=url_for([@post, {only_path: false}]) %>', '_blank', 'width=800, height=500, top=200, left=300');void(0);"><i class="fa fa-facebook"></i></a>
+		<!--googleplus-->
+		<a onclick="javascript:window.open('http://www.plus.google.com/share?=<%=url_for([@post, {only_path: false}]) %>', '_blank', 'width=800, height=500, top=200, left=300');void(0);"><i class="fa fa-google-plus"></i></a>
+	</div>
+	
+	<hr>
 
-			<%= render 'disqus' %>
+	<%= render 'disqus' %>
 
-		</div>
+</div>
 
 <br>
 <br>
