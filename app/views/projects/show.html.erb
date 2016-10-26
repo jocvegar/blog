@@ -14,3 +14,17 @@
 	</div>
 	<hr>
 </div>
+
+<br>
+<br>
+
+<div class="skinny_wrapper wrapper_padding">
+<div class="button">
+<%= link_to "Editar", edit_project_path(@project) %>
+</div>
+<br>
+<div class="button">
+<%= link_to "Borrar", project_path(@project), method: :delete, data: {confirm: "Seguro??"} %>
+<br>
+</div>
+</div>

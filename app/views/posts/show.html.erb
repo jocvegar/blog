@@ -29,6 +29,14 @@
 
 <br>
 <br>
-<%= link_to "Editar", edit_post_path(@post) %> <br>
-<%= link_to "Borrar", post_path(@post), method: :delete, data: {confirm: "Seguro??"} %>
+
+<div class="skinny_wrapper wrapper_padding">
+<div class="button">
+<%= link_to "Editar", edit_post_path(@project) %>
+</div>
 <br>
+<div class="button">
+<%= link_to "Borrar", post_path(@project), method: :delete, data: {confirm: "Seguro??"} %>
+<br>
+</div>
+</div>
