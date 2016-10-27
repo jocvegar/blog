@@ -9,22 +9,16 @@
 	<div id="content">
 		<%= markdown @project.description%>
 		<div class="button_wrapper">
-			<a href="<%= @project.link %>" class="project_button" target = "_blank">Visit <%= @project.title%> </a>
+			<a href="<%= @project.link %>" class="project_button" target = "_blank"> Visit <%= @project.title%> </a>
 		</div>
 	</div>
+
+	<% if user_signed_in? %>
+	<div id="admin_links">
+		<%= link_to "Edit Project", edit_project_path(@project) %>
+		<%= link_to "Delete Project", project_path(@project), method: :delete, data: { confirm: "Seguro?"} %>
+	</div>
+	<% end %>
 	<hr>
 </div>
 
-<br>
-<br>
-
-<div class="skinny_wrapper wrapper_padding">
-<div class="button">
-<%= link_to "Editar", edit_project_path(@project) %>
-</div>
-<br>
-<div class="button">
-<%= link_to "Borrar", project_path(@project), method: :delete, data: {confirm: "Seguro??"} %>
-<br>
-</div>
-</div>
