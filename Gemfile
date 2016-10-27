@@ -34,6 +34,7 @@ gem 'redcarpet', '~> 3.3', '>= 3.3.4'
 gem 'pygments.rb', '~> 0.6.3'
 gem 'friendly_id', '~> 5.1'
 gem 'will_paginate', '~> 3.1'
+gem 'devise', '~> 4.2'
 
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
