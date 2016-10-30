@@ -7,6 +7,9 @@ get '/index' => "welcome#index"
 get 'welcome/index'
 root 'welcome#index'
 
+get 'contact/index'
+root 'contact#index'
+
 get '*path' => redirect('/')
 
 end
