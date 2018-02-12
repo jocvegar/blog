@@ -1,9 +1,10 @@
 <div id="post_show_content" class="skinny_wrapper">
 	<header>
-
-		<p class="date"><%= @post.created_at.strftime('%A, %B %d') %> </p>
+		<p class="date"><%= @post.created_at.strftime('%A, %B %d') %></p>
 		<h1><%= @post.title%></h1>
+
 		<hr>
+		
 	</header>
 
 	<div id="content">
@@ -11,17 +12,16 @@
 	</div>
 
 	<% if user_signed_in? %>
-	<div id="admin_links">
-		<%= link_to "Edit Article", edit_post_path(@post) %>
-		<%= link_to "Delete Article", post_path(@post), method: :delete, data: { confirm: "Seguro?"} %>
-	</div>
+		<div id="admin_links">
+			<%= link_to "Edit Article", edit_post_path(@post) %>
+			<%= link_to "Delete Article", post_path(@post), method: :delete, data: { confirm: "Seguro?"} %>
+		</div>
 	<% end %>
-
 
 	<hr>
 
 	<div id="share_box">
-		<p>Compartir <%= @post.title%></p>
+		<p>Share <%= @post.title%></p>
 		<!--twitter-->
 		<a onclick="javascript:window.open('http://twitter.com/intent/tweet?text=<%= @post.title %> by @jocvegar - &amp;url=<%=url_for([@post, {only_path: false}]) %>', '_blank', 'width=800, height=500, top=200, left=300');void(0);"><i class="fa fa-twitter"></i></a> 
 		<!--facebook-->
@@ -29,7 +29,7 @@
 		<!--googleplus-->
 		<a onclick="javascript:window.open('http://www.plus.google.com/share?=<%=url_for([@post, {only_path: false}]) %>', '_blank', 'width=800, height=500, top=200, left=300');void(0);"><i class="fa fa-google-plus"></i></a>
 	</div>
-	
+
 	<hr>
 
 	<%= render 'disqus' %>

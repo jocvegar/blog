@@ -1,0 +1,123 @@
+<div class="row">
+	<div class="container-fluid">
+		<!-- Tips for markdown -->
+		<button data-toggle="collapse" data-target="#markdown-tips" style="border:none"
+						class="btn btn-default btn-small pull-right" type="button">
+			<small>Formatting Help <span class="caret"></span></small>
+		</button>
+	</div>
+</div>
+
+<div id="markdown-tips" class="collapse container-fluid" style="border: 1px solid #ddd;padding:0 2em 1em">
+	<div class="row" style='border-bottom:1px solid #eee'>
+		<div class="col-md-2" style="font-family:courier">
+			<strong><small>Bold:</small></strong>
+		</div>
+		<div class="col-md-6" style="font-family:courier">
+			<small>**Sample words**</small>
+		</div>
+		<div class="col-md-4" style="padding-top:5px">
+			<small><%= markdown("**Sample words**") %></small>
+		</div>
+	</div><!-- row -->
+
+	<div class="row" style='border-bottom:1px solid #eee'>
+		<div class="col-md-2" style="font-family:courier">
+			<strong><small>Italics:</small></strong>
+		</div>
+		<div class="col-md-6" style="font-family:courier">
+			<small>*Sample words*</small>
+		</div>
+		<div class="col-md-4" style="padding-top:5px">
+			<small><%= markdown("*Sample words*") %></small>
+		</div>
+	</div><!-- row -->
+
+	<div class="row" style='border-bottom:1px solid #eee'>
+		<div class="col-md-2" style="font-family:courier">
+			<strong><small>Links:</small></strong>
+		</div>
+		<div class="col-md-6" style="font-family:courier">
+			<small>[Sample link](http://safetyspot.com)</small>
+		</div>
+		<div class="col-md-4" style="padding-top:5px">
+			<small><u><%= markdown("[Sample link](http://safetyspot.com)") %></u></small>
+		</div>
+	</div><!-- row -->
+
+	<div class="row" style='border-bottom:1px solid #eee'>
+		<div class="col-md-2" style="font-family:courier">
+			<strong><small>List:</small></strong>
+		</div>
+		<div class="col-md-6" style="font-family:courier">
+			<small>
+			  * Milk<br>* Bread<br>* Wholegrain<br>* Butter
+			</small>
+		</div>
+		<div class="col-md-4" style="padding-top:5px">
+			<small><%= markdown("* Milk\n* Bread\n* Wholegrain\n* Butter") %></small>
+		</div>
+	</div><!-- row -->
+
+	<div class="row" style='border-bottom:1px solid #eee'>
+		<div class="col-md-2" style="font-family:courier">
+			<strong><small>Header1:</small></strong>
+		</div>
+		<div class="col-md-6" style="font-family:courier">
+			<small>
+			  # Header - Size 1
+			</small>
+		</div>
+		<div class="col-md-4" style="padding-right:0">
+			<h1 class="no-margin" style="margin-top: -10px;">
+				<small class='color'>Header - Size 1</small>
+			</h1>
+		</div>
+	</div><!-- row -->
+
+	<div class="row" style='border-bottom:1px solid #eee'>
+		<div class="col-md-2" style="font-family:courier">
+			<strong><small>Header2:</small></strong>
+		</div>
+		<div class="col-md-6" style="font-family:courier">
+			<small>
+			  ## Header - Size 2
+			</small>
+		</div>
+		<div class="col-md-4">
+			<h2 class="no-margin" style="margin-top: -6px;">
+				<small class='color'>Header - Size 2</small>
+			</h2>
+		</div>
+	</div><!-- row -->
+
+	<div class="row" style='border-bottom:1px solid #eee'>
+		<div class="col-md-2" style="font-family:courier">
+			<strong><small>Header3:</small></strong>
+		</div>
+		<div class="col-md-6" style="font-family:courier">
+			<small>
+			  ### Header - Size 3
+			</small>
+		</div>
+		<div class="col-md-4">
+			<h3 class="no-margin" style="margin-top: -4px;">
+				<small class='color'>Header - Size 3</small>
+			</h3>
+		</div>
+	</div><!-- row -->
+
+	<div class="row" style='border-bottom:1px solid #eee'>
+		<div class="col-md-2" style="font-family:courier">
+			<strong><small>Header3:</small></strong>
+		</div>
+		<div class="col-md-6" style="font-family:courier">
+			<small>
+			  #### Header - Size 4
+			</small>
+		</div>
+		<div class="col-md-4">
+			<h4 class="no-margin"><small class='color'>Header - Size 4</small></h4>
+		</div>
+	</div><!-- row -->
+</div><!-- id="markdown-tips" -->
