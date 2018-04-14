@@ -1,5 +1,4 @@
 <div class="wrapper wrapper_padding clearfix">
-
 	<div class="col-1 homepage_content about">
 		<h2>About</h2>
 		<hr>
@@ -10,15 +9,22 @@
 		<p>Currently, I am teaching myself how to code and create web sites to further explore my passion.</p>
 
 		<p>I couldn't be happier.</p>
-
-
 	</div>
 	<div class="col-2 homepage_content">
-		<h2>For The Curious Mind</h2>
+		<h2>
+			<%= link_to "For The Curious Mind", posts_path %>		
+		</h2>
 		<hr>
+
+		<% if user_signed_in? %>
+				<%#= link_to "<button>New Post</button>", new_post_path %>
+				<%= button_to "New Post", new_post_path, method: :get %>
+			</div>	
+		<% end %>
+		
 		<% @posts.each do |post| %>
-		<h3><a><%= link_to post.title, post %></a></h3>
-		<p class="date"><%= post.created_at.strftime("%A, %b %d") %></p>
+			<h3><a><%= link_to post.title, post %></a></h3>
+			<p class="date"><%= post.created_at.strftime("%b %d, %Y") %></p>
 		<% end %>
 	</div>
 

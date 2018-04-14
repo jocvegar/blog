@@ -1,45 +1,47 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <title> Jose Vega - Engineer and Developer</title>
+	<head>
+		<title> Jose Vega - Web Developer</title>
 		<link href="https://fonts.googleapis.com/css?family=Raleway:400,700" rel="stylesheet"> 
 		<script src="https://use.fontawesome.com/d3be72798d.js"></script>
-    <%= csrf_meta_tags %>
+		<%= csrf_meta_tags %>
+		<%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+		<%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+	</head>
 
-    <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
-    <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
-  </head>
-
-  <body>
-  <header id="main_navigation" class="clearfix">
-  			<%= link_to "Jose Vega", root_path, class: "name" %>
+	<body>
+		<header id="main_navigation" class="clearfix">
+			<%= link_to "Jose Vega", root_path, class: "name" %>
 			<nav>
 				<%= link_to "Articles", posts_path %>
-				<%#= link_to "Projects", projects_path %>
 				<%= link_to "Contact", contact_index_path %>
-				<% if user_signed_in?%>
-				<%= link_to "Sign Out", destroy_user_session_path, method: :delete %>
+				<% if user_signed_in? %>
+					<%= link_to "Sign Out", destroy_user_session_path, method: :delete %>
 				<% end %>
-
 			</nav>
 		</header>
-		
-	<% if notice %>
-	<p class="notice"><%= notice %></p>
-	<% elsif alert %>
-    <p class="alert"><%= alert %></p>
-    <% end %>
-		
-    <%= yield %>
 
-    <footer id=main_footer>
-		<p class="copyright">&copy; <%= Date.today.year %> <%= link_to "Jose Vega", root_path %></p>
+		<% if notice %>
+			<p class="notice"><%= notice %></p>
+		<% elsif alert %>
+			<p class="alert"><%= alert %></p>
+		<% end %>
 
-		<nav>
-			<a href="https://twitter.com/joc4" target="_blank"><i class="fa fa-twitter" aria-hidden="true"></i></a>
-			<a href="https://www.instagram.com/jocvegar/" target="_blank"><i class="fa fa-instagram" aria-hidden="true"></i></a>
-			<a href="https://github.com/jocvegar/" target="_blank"><i class="fa fa-github" aria-hidden="true"></i></a>
-		</nav>
+		<%= yield %>
+
+		<footer id=main_footer>
+			<p class="copyright">&copy; <%= Date.today.year %> <%= link_to "Jose Vega", root_path %></p>
+			<nav>
+				<a href="https://twitter.com/joc4" target="_blank">
+					<i class="fa fa-twitter" aria-hidden="true"></i>
+				</a>
+				<a href="https://www.instagram.com/jocvegar/" target="_blank">
+					<i class="fa fa-instagram" aria-hidden="true"></i>
+				</a>
+				<a href="https://github.com/jocvegar/" target="_blank">
+					<i class="fa fa-github" aria-hidden="true"></i>
+				</a>
+			</nav>
 		</footer>
-  </body>
+	</body>
 </html>
